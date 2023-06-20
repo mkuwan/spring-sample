@@ -1,0 +1,101 @@
+[
+  {
+    "customerId": "USR00001",
+    "customerName": "Store Customer 01",
+    "age": 35,
+    "gender": "M",
+    "postCode": "999-9999",
+    "address": "Tokyo, Japan",
+    "orders": [
+      {
+        "orderId": "ORD00001",
+        "totalPrice": 440,
+        "orderedProducts": [
+          {
+            "productName": "apple",
+            "quantity": 4,
+            "price": 50
+          },
+          {
+            "productName": "orange",
+            "quantity": 6,
+            "price": 40
+          }
+        ],
+        "orderDate": "2020-01-20",
+        "status": "In delivery"
+      },
+      {
+        "orderId": "ORD00002",
+        "totalPrice": 2000,
+        "orderedProducts": [
+          {
+            "productName": "chair",
+            "quantity": 1,
+            "price": 2000
+          }
+        ],
+        "orderDate": "2019-11-09",
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customerId": "USR00002",
+    "customerName": "Store Customer 02",
+    "age": 42,
+    "gender": "F",
+    "postCode": "888-8888",
+    "address": "Kyoto, Japan",
+    "orders": [
+      {
+        "orderId": "ORD00003",
+        "totalPrice": 4100,
+        "orderedProducts": [
+          {
+            "productName": "colour box",
+            "quantity": 3,
+            "price": 700
+          },
+          {
+            "productName": "cup",
+            "quantity": 4,
+            "price": 500
+          }
+        ],
+        "orderDate": "2019-12-24",
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customerId": "USR00003",
+    "customerName": "Store Customer 03",
+    "age": 20,
+    "gender": "F",
+    "postCode": "777-7777",
+    "address": "Okinawa, Japan",
+    "orders": [
+    ]
+  },
+  {
+    "customerId": "USR00004",
+    "customerName": "Store Customer 04",
+    "age": 12,
+    "gender": "M",
+    "postCode": "999-9999",
+    "address": "Tokyo, Japan",
+    "orders": [
+    ]
+  },
+  {
+    "customerId": "USR00005",
+    "customerName": "Store Customer 05",
+    "age": 28,
+    "gender": "F",
+    "postCode": "999-9999",
+    "address": "Tokyo, Japan",
+    "orders": [
+    ]
+  }
+]
