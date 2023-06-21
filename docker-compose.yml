@@ -44,10 +44,77 @@ services:
     volumes:
       - ./data/redis:/data
 
+  mariadb:
+    container_name: mariadb
+    hostname: mariadb
+    image: mariadb
+    environment:
+      # user: root
+      MYSQL_ROOT_PASSWORD: mariapassword
+      MYSQL_DATABASE: sampledb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    networks:
+      - mariadbnet
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb:/var/lib/mysql
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8306:80"
+    environment:
+      PMA_HOST: mariadb
+      PMA_VERBOSE: sampledb
+      PMA_PORT: 3306
+    depends_on:
+      - mariadb
+    networks:
+      - mariadbnet
+
+  postgres:
+    restart: always
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=sampledb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresql:/var/lib/postgresql
+      - postgresql_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    ports:
+      - "8432:80"
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: example@example.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    depends_on:
+      - postgres
+
 networks:
   mongo_db_net:
     driver: bridge
+  mariadbnet:
+    driver: bridge
+
 
 volumes:
   mongo:
   configdb:
+  pgadmin:
+  mariadb:
+  postgresql:
+  postgresql_data:
