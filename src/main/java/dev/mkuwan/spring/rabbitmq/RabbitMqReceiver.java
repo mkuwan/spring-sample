@@ -13,6 +13,7 @@ public class RabbitMqReceiver {
         Thread.sleep(1500);
         if(message.getClass() == String.class){
             logger.info("RabbitMq メッセージ受信:" + message);
+            return;
         }
 
         if(message.getClass() == MessagePojo.class){
