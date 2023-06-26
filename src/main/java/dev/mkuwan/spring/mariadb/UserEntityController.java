@@ -1,6 +1,5 @@
 package dev.mkuwan.spring.mariadb;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,6 +10,33 @@ public class UserEntityController {
 
     public UserEntityController(UserEntityRepository userEntityRepository){
         this.userEntityRepository = userEntityRepository;
+    }
+
+    @PostMapping(path = "/create-demo-users")
+    public @ResponseBody String createDemoUsers(){
+        UserEntity user = new UserEntity();
+
+        // User1
+        var email = "demo-user1@example.com";
+        var userName = "Demo User100";
+        var existUser = userEntityRepository.getUserEntityByEmail(email);
+        if(existUser == null){
+            user.setName(userName);
+            user.setEmail(email);
+            userEntityRepository.save(user);
+        }
+
+        // User2
+        email = "demo-user2@example.com";
+        userName = "Demo User200";
+        existUser = userEntityRepository.getUserEntityByEmail(email);
+        if(existUser == null){
+            user.setName(userName);
+            user.setEmail(email);
+            userEntityRepository.save(user);
+        }
+
+        return "Created!";
     }
 
     @PostMapping(path = "/add")

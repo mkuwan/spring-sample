@@ -1,12 +1,10 @@
 package dev.mkuwan.spring.redis;
 
-import dev.mkuwan.spring.SpringSampleApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -33,16 +31,16 @@ public class RedisCommandLineRunner implements ApplicationRunner {
         RedisReceiver receiver = context.getBean(RedisReceiver.class);
 
         while (receiver.getCount() < 5){
+            Thread.sleep(500L);
             logger.info("Sending message");
             template.convertAndSend("chat", "Hello from RedisApp!");
-            Thread.sleep(500L);
         }
     }
 
 
     @Bean
-    RedisMessageListenerContainer container(RedisConnectionFactory factory,
-                                            MessageListenerAdapter adapter){
+    RedisMessageListenerContainer redisContainer(RedisConnectionFactory factory,
+                                                 MessageListenerAdapter adapter){
         var container = new RedisMessageListenerContainer();
         container.setConnectionFactory(factory);
         container.addMessageListener(adapter, new PatternTopic("chat"));
@@ -53,7 +51,7 @@ public class RedisCommandLineRunner implements ApplicationRunner {
 
 
     @Bean
-    MessageListenerAdapter listenerAdapter(RedisReceiver receiver){
+    MessageListenerAdapter redisListenerAdapter(RedisReceiver receiver){
         return new MessageListenerAdapter(receiver, "receiveMessage");
     }
 

@@ -104,6 +104,14 @@ services:
     depends_on:
       - postgres
 
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
 networks:
   mongo_db_net:
     driver: bridge

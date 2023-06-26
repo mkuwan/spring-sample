@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserEntityRepository extends CrudRepository<UserEntity, Integer> {
+    UserEntity getUserEntityByEmail(String email);
 }

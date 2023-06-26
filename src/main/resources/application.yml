@@ -12,6 +12,8 @@ spring:
       host: localhost
       authentication-database: appdb
       database: appdb
+    rest:
+      base-path: /api
 
   devtools:
     remote:
