@@ -12,3 +12,5 @@ DB環境等はPCにインストールするようにチュートリアルでは�
 - JPA で MySQL データアクセス
   => mariadbに変更して行っています
 - RabbitMq
+- デザインパターン
+  - Adapter
