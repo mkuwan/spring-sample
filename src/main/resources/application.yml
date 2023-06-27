@@ -15,21 +15,25 @@ spring:
     rest:
       base-path: /api
 
-  devtools:
-    remote:
-      proxy:
-        host: localhost
-        port: 8080
-      restart:
-        enabled: true
-    livereload:         # Hot Reload
-      enabled: true
-    restart:            # Hot Reload
-      enabled: true
+#  devtools:
+#    remote:
+#      proxy:
+#        host: localhost
+#        port: 8080
+#      restart:
+#        enabled: true
+#    livereload:         # Hot Reload
+#      enabled: true
+#    restart:            # Hot Reload
+#      enabled: true
 
   batch:
     jdbc:
       initialize-schema: always
+
+  graphql:
+    graphiql:
+      enabled: true
 
   ##  in use H2
 #  datasource:

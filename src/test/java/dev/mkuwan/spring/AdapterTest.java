@@ -22,6 +22,13 @@ public class AdapterTest {
 
     private List<SampleData> sampleDataList = new ArrayList<>();
 
+//    以下のような listを使うのと　@ParameterizedTestを使う方法があるらしい
+//    @ParameterizedTest
+//    @CsvSource({
+//            "1st-param1","1st-param2",
+//            "2nd-param1","2nd-param2"
+//    }))
+
     @Test
     void voltageTest(){
         System.out.println("Adapter Pattern Test");

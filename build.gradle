@@ -29,6 +29,7 @@ dependencies {
     implementation 'org.webjars:sockjs-client:1.5.1'
     implementation 'org.webjars:stomp-websocket:2.3.4'
     implementation 'org.springframework.boot:spring-boot-starter-amqp'
+    implementation 'org.springframework.boot:spring-boot-starter-graphql'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
     runtimeOnly 'org.postgresql:postgresql'
@@ -38,6 +39,7 @@ dependencies {
     testImplementation('org.springframework.amqp:spring-rabbit-test')
     testCompileOnly('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
+    testImplementation 'org.springframework.graphql:spring-graphql-test'
 }
 
 tasks.named('test') {
