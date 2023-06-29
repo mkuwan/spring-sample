@@ -1,10 +1,13 @@
 package dev.mkuwan.spring;
 
+import dev.mkuwan.spring.storage.StorageProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
+@EnableConfigurationProperties(StorageProperties.class)
 public class SpringSampleApplication {
     public static ApplicationContext context = null;
 

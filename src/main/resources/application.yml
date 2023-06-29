@@ -1,10 +1,18 @@
 server:
   port: 8080
-  servlet:
-    context-path: /api
+#  servlet:
+#    context-path: /api
 
 spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
   data:
+    rest:
+      base-path: /api
+
     mongodb:
       port: 27017
       username: kuwa
@@ -12,20 +20,18 @@ spring:
       host: localhost
       authentication-database: appdb
       database: appdb
-    rest:
-      base-path: /api
 
-#  devtools:
-#    remote:
-#      proxy:
-#        host: localhost
-#        port: 8080
-#      restart:
-#        enabled: true
-#    livereload:         # Hot Reload
-#      enabled: true
-#    restart:            # Hot Reload
-#      enabled: true
+  devtools:
+    remote:
+      proxy:
+        host: localhost
+        port: 8080
+      restart:
+        enabled: true
+    livereload:         # Hot Reload
+      enabled: true
+    restart:            # Hot Reload
+      enabled: true
 
   batch:
     jdbc:
@@ -80,6 +86,7 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+
 
 ## in use postgresql
 #  datasource:
