@@ -36,8 +36,13 @@ public class BatchConfiguration {
     }
 
     @Bean
-    public PersonItemProcessor processor(){
+    public PersonItemProcessor processor1(){
         return new PersonItemProcessor();
+    }
+
+    @Bean
+    public PersonItemProcessor2 processor2(){
+        return new PersonItemProcessor2();
     }
 
     @Bean
@@ -52,12 +57,13 @@ public class BatchConfiguration {
     @Bean
     public Job importUserJob(JobRepository jobRepository,
                              JobCompletionNotificationListener listener,
-                             Step step1){
+                             Step step1, Step step2){
         return new JobBuilder("importUserJob", jobRepository)
                 .incrementer(new RunIdIncrementer())
                 .listener(listener)
-                .flow(step1)
-                .end().build();
+                .start(step1)
+                .next(step2)
+                .build();
     }
 
     @Bean
@@ -66,7 +72,18 @@ public class BatchConfiguration {
         return new StepBuilder("step1", jobRepository)
                 .<Person, Person> chunk(10, transactionManager)
                 .reader(reader())
-                .processor(processor())
+                .processor(processor1())
+                .writer(writer)
+                .build();
+    }
+
+    @Bean
+    public Step step2(JobRepository jobRepository, PlatformTransactionManager transactionManager,
+                      JdbcBatchItemWriter<Person> writer){
+        return new StepBuilder("step2", jobRepository)
+                .<Person, Person> chunk(10, transactionManager)
+                .reader(reader())
+                .processor(processor2())
                 .writer(writer)
                 .build();
     }
