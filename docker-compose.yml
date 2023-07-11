@@ -60,7 +60,7 @@ services:
       - "3306:3306"
     volumes:
       - mariadb:/var/lib/mysql
-    restart: unless-stopped
+    restart: always #unless-stopped
 
   phpmyadmin:
     image: phpmyadmin

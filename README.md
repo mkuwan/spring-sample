@@ -6,6 +6,7 @@ DB環境等はPCにインストールするようにチュートリアルでは�
 ## 実装したもの
 - REST APIの作成
 - RestTemplateの使用
+- Hateoas
 - Redisでメッセージング
 - バッチサービスの作成
 - MongoDBでデータアクセス

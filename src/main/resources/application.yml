@@ -10,8 +10,8 @@ spring:
       max-request-size: 5MB
 
   data:
-    rest:
-      base-path: /api
+#    rest:
+#      base-path: /api
 
     mongodb:
       port: 27017
@@ -21,17 +21,17 @@ spring:
       authentication-database: appdb
       database: appdb
 
-  devtools:
-    remote:
-      proxy:
-        host: localhost
-        port: 8080
-      restart:
-        enabled: true
-    livereload:         # Hot Reload
-      enabled: true
-    restart:            # Hot Reload
-      enabled: true
+#  devtools:
+#    remote:
+#      proxy:
+#        host: localhost
+#        port: 8080
+#      restart:
+#        enabled: true
+#    livereload:         # Hot Reload
+#      enabled: true
+#    restart:            # Hot Reload
+#      enabled: true
 
   batch:
     jdbc:
