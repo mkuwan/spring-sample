@@ -2,7 +2,10 @@ package dev.mkuwan.spring;
 
 import dev.mkuwan.spring.pattern.creational.adapter.Adaptor;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
@@ -22,12 +25,26 @@ public class AdapterTest {
 
     private List<SampleData> sampleDataList = new ArrayList<>();
 
-//    以下のような listを使うのと　@ParameterizedTestを使う方法があるらしい
-//    @ParameterizedTest
-//    @CsvSource({
-//            "1st-param1","1st-param2",
-//            "2nd-param1","2nd-param2"
-//    }))
+    @BeforeEach
+    void setup(){
+        sampleDataList = new ArrayList<>();
+    }
+
+    @ParameterizedTest
+    @CsvSource({"Japan, 100",
+            "India, 220",
+            "England, 240",
+            "US, 110/120"})
+    void voltageTestWithParameterized(String location, String responseVoltage){
+        // arrange
+        sampleDataList.add(new SampleData(location, responseVoltage));
+
+        // assertion
+        sampleDataList.forEach(x -> {
+            Adaptor adaptor = new Adaptor(x.location);
+            assertEquals(x.responseVoltage, adaptor.getVoltage());
+        });
+    }
 
     @Test
     void voltageTest(){

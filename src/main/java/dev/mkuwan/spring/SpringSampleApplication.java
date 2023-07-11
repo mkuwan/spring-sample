@@ -15,7 +15,9 @@ import java.awt.event.ActionEvent;
 
 @SpringBootApplication
 @EnableConfigurationProperties(StorageProperties.class)
-public class SpringSampleApplication extends JFrame {
+public class SpringSampleApplication {
+    // Mediator PatterのNoteRunnerのコメントを外した場合は以下を使用する
+    // public class SpringSampleApplication extends JFrame {
     public static ApplicationContext context = null;
 
     public static void main(String[] args) {
