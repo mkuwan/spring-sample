@@ -11,17 +11,17 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
-//@ExtendWith(SpringExtension.class)
-//@SpringBootTest
-//@AutoConfigureMockMvc
-//public class HateoasMvcTests {
-//
-//    @Autowired
-//    private MockMvc mockMvc;
-//
-//    @Test
-//    public void envEndpointNotHidden() throws Exception {
-//        mockMvc.perform(get("/hateoas-greeting"))
-//                .andExpect(jsonPath("$.content").value("Hello, World!!!"));
-//    }
-//}
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+public class HateoasMvcTests {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Test
+    public void envEndpointNotHidden() throws Exception {
+        mockMvc.perform(get("/hateoas-greeting"))
+                .andExpect(jsonPath("$.content").value("Hello, World!!!"));
+    }
+}

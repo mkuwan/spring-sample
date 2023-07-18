@@ -1,11 +1,13 @@
 package dev.mkuwan.spring;
 
 import dev.mkuwan.spring.pattern.creational.adapter.Adaptor;
+import dev.mkuwan.spring.storage.StorageProperties;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
@@ -31,10 +33,11 @@ public class AdapterTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"Japan, 100",
-            "India, 220",
-            "England, 240",
-            "US, 110/120"})
+    @CsvSource({"日本, 100",
+            "インド, 220",
+            "イギリス, 240",
+            "フィンランド, 220/230",
+            "アメリカ, 110/120"})
     void voltageTestWithParameterized(String location, String responseVoltage){
         // arrange
         sampleDataList.add(new SampleData(location, responseVoltage));

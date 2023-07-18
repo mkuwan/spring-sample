@@ -1,0 +1,112 @@
+<mxfile host="Electron" modified="2023-07-18T05:18:28.702Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.1 Chrome/112.0.5615.204 Electron/24.6.1 Safari/537.36" etag="xvgMBjmZW4sz3SeJ-xjt" version="21.6.1" type="device">
+  <diagram name="バッチ" id="8cC28P45YuaeeRGN-KjC">
+    <mxGraphModel dx="1548" dy="1135" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="C1uZIv5KirHw3lCnyw10-1" value="&lt;h1&gt;バッチとは&lt;/h1&gt;&lt;p&gt;簡単に言えば一括処理&lt;/p&gt;&lt;p&gt;プログラムは画面やコンソールから操作して、その操作に対応する処理を行います。&lt;br&gt;いわば画面等に同期して行われる処理&lt;/p&gt;&lt;p&gt;それらの処理が大量にある場合や、画面等とは関係なくデータ処理が必要となる場合、定期的にデータ処理をするといった場合に、独立したプログラムとして処理が行われます。また複数のジョブを並行処理して大量データに対応させることもあります&lt;/p&gt;&lt;p&gt;一般的にジョブと呼ばれ、複数のジョブを連携させる場合もある。JP1はこのジョブの実行と管理を行うソフトウェアです&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="750" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C1uZIv5KirHw3lCnyw10-2" target="C1uZIv5KirHw3lCnyw10-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-9" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C1uZIv5KirHw3lCnyw10-2" target="C1uZIv5KirHw3lCnyw10-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-2" value="ジョブ1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="200" y="250" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C1uZIv5KirHw3lCnyw10-3" target="C1uZIv5KirHw3lCnyw10-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-3" value="ジョブ2a" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="360" y="250" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-5" value="ジョブ3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="520" y="250" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="C1uZIv5KirHw3lCnyw10-8" target="C1uZIv5KirHw3lCnyw10-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-8" value="ジョブ2b" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="360" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-11" value="&lt;h1&gt;ジョブとタスク&lt;/h1&gt;&lt;p&gt;ジョブが一つの機能単位であるのに対し、タスクはその機能の内部で処理する処理単位&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="485" width="530" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-13" value="ジョブ1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="565" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-14" value="タスクA" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-13">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-15" value="タスクB" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-13">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-16" value="タスクC" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-13">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-17" value="ジョブ2" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="565" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-18" value="タスクX" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-17">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-19" value="タスクY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-17">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-20" value="タスクZ" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-17">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-21" value="&lt;h1&gt;ジョブとステップ&lt;/h1&gt;&lt;p&gt;Springでは上述のタスクに当たる部分をステップと表現して実装しています&lt;/p&gt;&lt;p&gt;後で出てきますが、SpringではTaskletという名前でStepの要素を指定するパターンもあります&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="39" y="1249" width="731" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-22" value="ジョブ1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1360" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-23" value="StepA" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-22">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-24" value="StepB" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-22">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-25" value="StepC" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-22">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-26" value="ジョブ2" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="1360" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-27" value="ステップX" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-26">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-28" value="ステップY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-26">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-29" value="ステップZ" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="C1uZIv5KirHw3lCnyw10-26">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-30" value="&lt;h1&gt;ステップ : ItemReader, ItemProcessor, ItemWriter, Listener&lt;/h1&gt;&lt;p&gt;Stepは一つの処理単位として行われ、内部構造としてはデータの取得、処理、書き込みを一連の流れとしています&lt;/p&gt;&lt;p&gt;これがItemReader, ItemProcessor, ItemWriteです&lt;/p&gt;&lt;p&gt;Listenerはジョブの実行状況を確認するもので、監視ログを取ったり、結果の確認をするために使用されます&lt;br&gt;ジョブの実行には必須ではありません&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="39" y="1530" width="761" height="151" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-31" value="&lt;h1 style=&quot;border-color: var(--border-color); color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Spring Batch&lt;/h1&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1180" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-32" value="&lt;h1&gt;ジョブの管理・実行&lt;/h1&gt;&lt;p&gt;ジョブを管理し実行する方法としては主に二つあります&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;batファイルやShellスクリプトによる実行&lt;/li&gt;&lt;li&gt;JP1などの管理ソフトウェアを使用した実行&lt;/li&gt;&lt;/ol&gt;&lt;div&gt;　Shellスクリプトの場合も、それを実行する際はスケジューラなどを使用します&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;　つまり、&lt;/div&gt;&lt;div&gt;　　いつ・何を実行するかを決めるスケジューラ&lt;/div&gt;&lt;div&gt;　　実行を命令するスクリプト&lt;/div&gt;&lt;div&gt;　の二種類が主なものとなります&lt;/div&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="740" width="591" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-33" value="&lt;h1&gt;ジョブの管理、実行&lt;/h1&gt;&lt;p&gt;ジョブの管理についてはJobRepositoryがその責務を果たします&lt;/p&gt;&lt;p&gt;ジョブの実行はJobLauncherがその責務を果たします&lt;/p&gt;&lt;p&gt;Springではこの部分をほとんど意識しなくてもフレームワークで代わりに実装をしてくれている&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1720" width="570" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-34" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://spring.pleiades.io/spring-batch/docs/current/reference/html/images/spring-batch-reference-model.png;" vertex="1" parent="1">
+          <mxGeometry x="39" y="1880" width="738" height="294" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-35" value="Spring Batchのドキュメントより" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="579" y="2144" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C1uZIv5KirHw3lCnyw10-36" value="&lt;h1&gt;(蛇足)そもそも何でバッチ必要なの?&lt;/h1&gt;&lt;p&gt;バッチこそシステム開発の中心と考えられた時代がありました。全てのデータの締め処理を行うからです。&lt;br&gt;普通に考えれば、その都度処理していれば、いちいち溜まったデータの締め処理なんて必要ないように感じられますが、昔はサーバーが単体で、サーバーの処理能力を日中は業務に充てて、夜間に業務で作成されたデータの締め処理をするというように、サーバーの能力の分散をしたからです。&lt;br&gt;けれども、現代のように24時間稼働が普通になると、そのように夜間に振り分けるということ自体が無理ゲーになってきました。&lt;br&gt;そこで最近では、マイクロバッチと呼ばれる手法で、都度小さなバッチプログラムを走らせるということが行われています。&lt;br&gt;月次締めといった定期実行以外は、本来的にはこのように都度処理をする方が効率的となっています。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1000" width="720" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
