@@ -1,4 +1,4 @@
-package dev.mkuwan.spring.batch;
+package dev.mkuwan.spring.batchstep;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

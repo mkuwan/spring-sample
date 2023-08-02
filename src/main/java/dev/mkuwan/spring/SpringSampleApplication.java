@@ -8,11 +8,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import javax.swing.*;
+
 @SpringBootApplication
 @EnableConfigurationProperties(StorageProperties.class)
 public class SpringSampleApplication {
     // Mediator PatterのNoteRunnerのコメントを外した場合は以下を使用する
-    // public class SpringSampleApplication extends JFrame {
+//public class SpringSampleApplication extends JFrame {
 
     public static ApplicationContext context = null;
 

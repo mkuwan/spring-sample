@@ -8,7 +8,7 @@ public class UserEntityController {
 
     private final UserEntityRepository userEntityRepository;
 
-    public UserEntityController(UserEntityRepository userEntityRepository){
+    public UserEntityController(UserEntityRepository userEntityRepository) {
         this.userEntityRepository = userEntityRepository;
     }
 

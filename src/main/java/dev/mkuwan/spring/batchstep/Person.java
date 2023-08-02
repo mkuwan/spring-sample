@@ -1,4 +1,4 @@
-package dev.mkuwan.spring.batch;
+package dev.mkuwan.spring.batchstep;
 
 import java.util.UUID;
 

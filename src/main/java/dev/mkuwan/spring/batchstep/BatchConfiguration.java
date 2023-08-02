@@ -1,9 +1,9 @@
-package dev.mkuwan.spring.batch;
+package dev.mkuwan.spring.batchstep;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.JobRegistry;
-import org.springframework.batch.core.configuration.support.DefaultBatchConfiguration;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.repository.JobRepository;
@@ -14,6 +14,7 @@ import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilde
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -23,6 +24,9 @@ import javax.sql.DataSource;
 
 @Configuration
 public class BatchConfiguration {
+
+    private static final Logger logger = LoggerFactory.getLogger(BatchConfiguration.class);
+
     @Bean
     public FlatFileItemReader<Person> reader(){
         return new FlatFileItemReaderBuilder<Person>()
@@ -56,6 +60,7 @@ public class BatchConfiguration {
     }
 
     @Bean
+    @Qualifier("importUserJob")
     public Job importUserJob(JobRepository jobRepository,
                              JobCompletionNotificationListener listener,
                              Step step1, Step step2){
@@ -88,4 +93,5 @@ public class BatchConfiguration {
                 .writer(writer)
                 .build();
     }
+
 }
