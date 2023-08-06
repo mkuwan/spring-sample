@@ -25,7 +25,7 @@ public class KafkaConfiguration {
     @Bean
     public NewTopic topic1(){
         return TopicBuilder.name("topic1")
-                .partitions(10)
+                .partitions(1)
                 .replicas(1)
                 .compact().build();
     }
@@ -80,7 +80,7 @@ public class KafkaConfiguration {
 //        );
 //    }
 
-    @KafkaListener(id = "1", topics = "topic1")
+    @KafkaListener(topics = {"general-topic"}, groupId = "task-group")
     public void listen(String in){
         System.out.println("Kafkaのtopicを受信しました:" + in);
     }

@@ -18,7 +18,7 @@ public class KafkaController {
 
     @PostMapping(path = "/send")
     public String sendKafkaTopic(@RequestParam("message") String message){
-        kafkaTemplate.send("topic1",message);
+        kafkaTemplate.send("general-topic",message);
 
         return "Kafka send";
     }
