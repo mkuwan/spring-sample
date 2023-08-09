@@ -15,7 +15,6 @@ public class CookingTask implements Tasklet {
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
         try {
-
             for (int i = 0; i < 5; i++) {
                 Thread.sleep(2 * 1000);
                 if(i == 0) Cooking01();
@@ -28,7 +27,6 @@ public class CookingTask implements Tasklet {
         } catch (Exception e) {
             logger.error(e.getMessage());
         }
-
         return RepeatStatus.FINISHED;
     }
 
