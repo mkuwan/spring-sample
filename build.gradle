@@ -36,7 +36,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-configuration-processor'
     implementation 'org.springframework.boot:spring-boot-starter-hateoas'
     implementation 'org.springframework.kafka:spring-kafka'
-//    implementation 'org.apache.kafka:kafka-streams'
+//    implementation 'org.springframework.boot:spring-boot-starter-integration'
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
 
     runtimeOnly 'com.h2database:h2'
